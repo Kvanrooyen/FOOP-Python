@@ -33,3 +33,12 @@ class Sprite():
     @staticmethod
     def speak():
         print('I am a sprite')
+
+    def alive(self):
+        return self.isAlive
+
+    def visible(self):
+        return self.isVisible
+
+    def fname(self):
+        return self.name
