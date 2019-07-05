@@ -36,7 +36,7 @@ class Player(Sprite):
         print("I am a player")
 
     def getPlayerDetails(self):
-        return 'Team name: {0}\nEnemies killed: {1}'.format(self.teamName, self.enemiesKilled)
+        return '\n\nTeam name: {0}\nEnemies killed: {1}'.format(self.teamName, self.enemiesKilled)
 
     def retreat(self):
         self.xLocation -= 10
