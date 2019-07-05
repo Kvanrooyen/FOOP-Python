@@ -15,7 +15,7 @@ Must have two constructors, default and overloaded
 """
 
 
-class Sprite():
+class Sprite:
 
     def __init__(self, name="Name not set", xLocation=0, yLocation=0, isVisible=True, isAlive=True):
         self.name = name
@@ -24,8 +24,9 @@ class Sprite():
         self.isVisible = isVisible
         self.isAlive = isAlive
 
-    def currentLocation(self):
-        return f'X: {self.xLocation}\nY: {self.yLocation}'
+    def setLocation(self, xLocation, yLocation):
+        self.xLocation = xLocation
+        self.yLocation = yLocation
 
     def jump(self):
         self.yLocation += 10
@@ -34,11 +35,14 @@ class Sprite():
     def speak():
         print('I am a sprite')
 
-    def alive(self):
-        return self.isAlive
+    def setAlive(self, isAlive):
+        self.isAlive = isAlive
 
-    def visible(self):
-        return self.isVisible
+    def setVisible(self, isVisible):
+        self.isVisible = isVisible
 
-    def fname(self):
-        return self.name
+    def setName(self, name):
+        self.name = name
+
+    def __str__(self):
+        return "\nName: {0}\nX: {1} and Y: {2}\nVisible: {3}\nAlive: {4}".format(self.name, self.xLocation, self.yLocation, self.isVisible, self.isAlive)
