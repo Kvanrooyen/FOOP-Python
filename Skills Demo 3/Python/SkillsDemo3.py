@@ -9,27 +9,12 @@ Get player to retreat and print out X and Y location
 from Sprite import Sprite
 from Player import Player
 
-
-# Test Sprite
-sprite1 = Sprite()
-sprite1.setName("Keagan")
-sprite1.setLocation(654, 52)
-sprite1.speak()
-print(sprite1.__str__())
-sprite1.jump()
-print('\n\n' + sprite1.__str__())
-
-
 # Player Test
 player1 = Player()
-# FIXME If no value is given program crashes. Should revert back to default value
-print(player1.playerName("Player One"))
-print(player1.playerLocation(25, 45))
-player1.playerJump()
+player1.setName("Bob")
+player1.setLocation(54, 4444)
+player1.setEnemiesKilled(4)
+player1.setTeamName("Red Dragons")
+print(player1.getPlayerDetails())
+print(player1.__str__())
 player1.retreat()
-# FIXME If no value is given program crashes. Should use
-print(player1.playerLocation())
-player1.speak()
-print(player1.playerTeam("Good Team"))
-player1.playerAlive(False)
-player1.playerVisible(True)
