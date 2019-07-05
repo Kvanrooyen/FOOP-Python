@@ -30,13 +30,13 @@ class Enemy(Sprite):
         self.teamName = teamName
 
     def setPlayersKilled(self, playersKilled):
-        self.plaplayersKilled = playersKilled
+        self.playersKilled = playersKilled
 
     def enemySpeak(self):
         print("I am an enemy")
 
     def getPlayerDetails(self):
-        return 'Team name: {0}\nPlayers killed: {1}'.format(self.teamName, self.playersKilled)
+        return '\n\nTeam name: {0}\nPlayers killed: {1}'.format(self.teamName, self.playersKilled)
 
     def attack(self):
         self.xLocation += 10
