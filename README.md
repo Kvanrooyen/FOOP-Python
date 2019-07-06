@@ -2,10 +2,47 @@
 
 Converting my college Java programs to Python
 
+## Skills Demo 1
+
+### Calculator
+
+> Write a Java program that implements a simple calculator. It will contain 1 java class called Calculator.java. The class will take 2 integers and an operator (+ - / \*) as input from the command line.
+>
+> Identify all the data types required and declare the required variables.
+>
+> Use an if/else (or switch) statement to determine which operator the user entered, and for each case perform the operation (add, subtract, divide or multiply) and write the result out to the command line.
+>
+> Use casting to ensure that data loss does not occur in your program, for example:
+>
+> 1. When you divide 10 by 4. The answer is 2.5 (a float) not 2 (an integer).
+> 2. When you add, subtract or multiply two integers that produce a result larger than 2147483647 (or smaller than ‐2147483647) you need to cast to a long.
+
+## Skills Demo 2
+
+### Craps game
+
+> **Problem Statement**
+>
+> Write a Java program that implements a game of CRAPS. It will contain 1 java class called Craps.java.
+>
+> **Rules for the game:**
+>
+> In the game of Craps, players roll a pair of dice. Only the sum of the spots matters: a number between 2 and 12. The shooter does the rolling. Below, win or loss refers to the shooter.
+>
+> - Shooter rolls two dice to get the first sum.
+>   - If the first sum is 2, 3, or 12, shooter loses.
+>   - Otherwise, if the first sum is 7 or 11, shooter wins.
+>   - Otherwise, the first sum becomes the point.
+> - Now keep rolling again and again
+> - Shooter rolls two dice to get the new sum.
+>   - If the new sum equals the point, shooter wins.
+>   - Otherwise if the new sum equals 7, shooter looses.
+>   - Otherwise shooter rolls again.
+
 ## Skills Demo 3
 
-> **2D Game Engine**
->
+### **2D Game Engine**
+
 > Create a program that has three classes
 >
 > - A sprite
