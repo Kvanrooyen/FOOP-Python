@@ -13,37 +13,61 @@
 import random
 
 
-# Roll dice and give user a number between 2 and 12
-diceRoll = random.randint(2, 12)
-
-
 def play():
+    point = random.randint(2, 12)
     # Check for a win
-    if diceRoll == 7 or diceRoll == 11:
-        print(f'Point: {diceRoll}    Result: WIN')
+    if point == 7 or point == 11:
+        print(f'Point: {point}    Result: WIN')
         print("===================")
-        # TODO Add a replay option (if else with while loop to play())
+        # Ask user if they want to play again
+        print("Would you like to play again? [Y/N]")
+        playAgain = input("> ")
+        if playAgain == 'Y' or playAgain == 'y':
+            play()
+        else:
+            exit
+
     # Check for a loss
-    elif diceRoll == 2 or diceRoll == 3 or diceRoll == 12:
-        print(f'Point: {diceRoll}    Result: LOST')
+    elif point == 2 or point == 3 or point == 12:
+        print(f'Point: {point}    Result: LOST')
         print("===================")
-        # TODO Add a replay option (if else with while loop to play())
+        # Ask user if they want to play again
+        print("Would you like to play again? [Y/N]")
+        playAgain = input("> ")
+        if playAgain == 'Y' or playAgain == 'y':
+            play()
+        else:
+            exit
     # Neither win or loss
     else:
-        print(f'Point: {diceRoll}    Result: Roll again!')
+        print(f'Point: {point}    Result: Roll again!')
         # Roll another point for the user to check against their original score
         newDiceRoll = random.randint(2, 12)
-        while (diceRoll != newDiceRoll or diceRoll == newDiceRoll):
+        while (point != newDiceRoll or point == newDiceRoll):
             # Check for a win
-            if diceRoll == newDiceRoll:
+            if point == newDiceRoll:
                 # Win
                 print(f'Point: {newDiceRoll}    Result: WIN')
                 print("===================")
+                # Ask user if they want to play again
+                print("Would you like to play again? [Y/N]")
+                playAgain = input("> ")
+                if playAgain == 'Y' or playAgain == 'y':
+                    play()
+                else:
+                    exit
                 break
             elif newDiceRoll == 7:
                 # Lost
                 print(f'Point: {newDiceRoll}    Result: LOST')
                 print("===================")
+                # Ask user if they want to play again
+                print("Would you like to play again? [Y/N]")
+                playAgain = input("> ")
+                if playAgain == 'Y' or playAgain == 'y':
+                    play()
+                else:
+                    exit
                 break
             else:
                 # No win or loss
